@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:30px 10%;
+    background-color: #00a6c0;
+}
+
+li ,a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav__links a,
+.btn,
+.main_responsive_content {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+.nav__links {
+    display: flex;
+}
+
+.nav__links li {
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: color 0.3 ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #f09b93;
+}
+
+.btn {
+    padding: 9px 25px;
+    background-color: #f09b93;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}
+
+.btn:hover {
+    background-color: #E9DD8A;
+}
+
+/*Movil*/
+
+.menu {
+    display: none;
+}
+
+.main_responsive {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #00a6c0;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+}
+
+.main_responsive--active {
+    width: 100%;
+}
+
+.main_responsive_content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_responsive a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    color: #fff;
+    transition: color 0.3s ease 0s;
+}
+
+.main_responsive a:hover,
+.main_responsive a:focus {
+    color: #f09b93;
+}
+.main_responsive .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #edf0f1;
+}
+
+@media screen and (max-height: 450px) {
+    .main_responsive .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    .main_responsive a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav__links,
+    .btn {
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+}
